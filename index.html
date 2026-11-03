@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a15">
+  <meta name="description" content="A little midnight universe of memories, reasons, and surprises — made for Babu.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Happy Birthday, Babu ♡">
+  <meta property="og:description" content="A little midnight universe of memories, reasons, and surprises — made for Babu.">
+  <meta property="og:type" content="website">
+  <title>Happy Birthday, Babu ♡</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the little universe</a>
+
+  <noscript>
+    <div class="noscript">
+      <p>This little world needs JavaScript to come alive. Please enable it, then refresh the page. ♡</p>
+    </div>
+  </noscript>
+
+  <div class="sky" aria-hidden="true">
+    <canvas id="starCanvas"></canvas>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scrollProgress"></span>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#welcome" aria-label="Back to the beginning">
+      <span class="brand__for">for</span>
+      <span class="brand__name" id="navBrand">Babu</span>
+      <span class="brand__heart" aria-hidden="true">♡</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+      <a href="#memories">Memories</a>
+      <a href="#reasons">Reasons</a>
+      <a href="#surprises">Surprises</a>
+      <a href="#letter">The letter</a>
+      <a href="#wish">Make a wish</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" title="Gentle ambient music">
+        <span class="sound-toggle__icon" aria-hidden="true">
+          <span class="sound-bars"><i></i><i></i><i></i></span>
+        </span>
+        <span class="sound-toggle__label" id="soundLabel">Sound off</span>
+      </button>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =====================================================
+         1. WELCOME
+         ===================================================== -->
+    <section id="welcome" class="hero">
+      <div class="hero__moon" aria-hidden="true"></div>
+      <div class="hero__sparkles" aria-hidden="true">
+        <span class="sparkle sparkle--one">✦</span>
+        <span class="sparkle sparkle--two">✧</span>
+        <span class="sparkle sparkle--three">✦</span>
+        <span class="sparkle sparkle--four">✧</span>
+      </div>
+
+      <div class="hero__inner">
+        <p class="eyebrow reveal">A little universe, made for you</p>
+
+        <h1 class="hero__title reveal">
+          <span class="hero__title-line">Happy Birthday,</span>
+          <span class="hero__title-name" id="heroName">My Babu !</span>
+        </h1>
+
+        <p class="hero__intro reveal" id="heroIntro">
+          Somewhere between the first glance in college and the night Bhartiyam brought us close,
+          you became my home. I made you a little world tonight — our memories, all the reasons
+          I adore you, and a few surprises I’ve been keeping close. Stay as long as you like.
+          This one is yours.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#memories">
+            <span id="heroButtonLabel">Begin the surprise</span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--ghost" href="#letter" id="heroLetterLabel">Read the letter</a>
+        </div>
+
+        <p class="hero__signature reveal" id="heroSignature">with my whole heart, Kaavu ♡</p>
+
+        <div class="hero__date reveal">
+          <span class="hero__date-rule" aria-hidden="true"></span>
+          <span class="hero__date-text" id="heroDate">04 · 11 · 2026</span>
+          <span class="hero__date-label" id="heroDateLabel">the day the world got you</span>
+          <span class="hero__date-rule" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#memories" aria-label="Scroll to our memories">
+        <span class="hero__scroll-text" id="heroScroll">scroll gently</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- =====================================================
+         2. MEMORIES
+         ===================================================== -->
+    <section id="memories" class="section section--memories">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Chapter one · us</p>
+          <h2 class="section__title">Our little universe</h2>
+          <p class="section__accent">the moments I keep coming back to</p>
+          <p class="section__intro" id="memoriesIntro">
+            It started in college — two people who noticed each other before they knew how to
+            say it. Then Bhartiyam came, and somewhere between the noise and the lights, we
+            found something that felt like home. These are a few of the pieces I never want
+            to forget.
+          </p>
+        </header>
+
+        <div class="gallery" id="gallery" role="group" aria-label="Our photo memories"></div>
+
+        <div class="gallery__more">
+          <button class="btn btn--ghost btn--small" id="moreMemory" type="button" aria-expanded="false" aria-controls="gallery">
+            <span id="moreMemoryLabel">There’s one more memory…</span>
+          </button>
+          <p class="gallery__note" id="moreMemoryNote" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         3. REASONS
+         ===================================================== -->
+    <section id="reasons" class="section section--reasons">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Chapter two · you</p>
+          <h2 class="section__title">Why I love you</h2>
+          <p class="section__accent">a few of the countless reasons</p>
+          <p class="section__intro" id="reasonsIntro">
+            I could fill a hundred pages. Here are some of the ones that live in my chest —
+            tap a heart to open it.
+          </p>
+        </header>
+
+        <div class="hearts" id="hearts" role="group" aria-label="Reasons I love you"></div>
+
+        <p class="hearts__closing reveal">
+          <span id="reasonsClosing">And a thousand more I’ll tell you in person.</span>
+          <span class="hearts__signature" id="reasonsSignature">— Kaavu ♡</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         4. SURPRISE ROOM
+         ===================================================== -->
+    <section id="surprises" class="section section--surprises">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Chapter three · surprises</p>
+          <h2 class="section__title">The surprise room</h2>
+          <p class="section__accent">five little doors, just for you</p>
+          <p class="section__intro" id="surprisesIntro">
+            Open them in any order. Some are silly, some are soft, and one is for the days
+            you need me close.
+          </p>
+        </header>
+
+        <div class="surprise-grid" id="surpriseGrid" role="group" aria-label="Birthday surprises"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         5. FINAL LETTER
+         ===================================================== -->
+    <section id="letter" class="section section--letter">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Chapter four · the letter</p>
+          <h2 class="section__title">Before you go…</h2>
+          <p class="section__accent">a letter for you</p>
+          <p class="section__intro" id="letterIntro">
+            This is the part I couldn’t fit into a caption or a card. Open it when you’re ready.
+          </p>
+        </header>
+
+        <div class="envelope-scene" id="envelopeScene">
+          <button class="envelope" id="envelopeButton" type="button" aria-expanded="false" aria-controls="letterArticle">
+            <span class="envelope__back" aria-hidden="true"></span>
+            <span class="envelope__letter-peek" aria-hidden="true"></span>
+            <span class="envelope__front" aria-hidden="true"></span>
+            <span class="envelope__flap" aria-hidden="true"></span>
+            <span class="envelope__seal" aria-hidden="true">K</span>
+            <span class="envelope__label" id="envelopeLabel">A letter, sealed with a kiss</span>
+            <span class="envelope__hint" id="envelopeHint">Open the letter</span>
+          </button>
+
+          <article class="letter-paper" id="letterArticle" hidden tabindex="-1" aria-labelledby="letterHeading">
+            <div class="letter-paper__top">
+              <span class="letter-paper__seal" aria-hidden="true">K</span>
+              <p class="letter-paper__date" id="letterDate">04 · 11 · 2026</p>
+            </div>
+            <h3 class="letter-paper__heading" id="letterHeading">My Babu,</h3>
+            <div class="letter-paper__body" id="letterBody"></div>
+            <div class="letter-paper__signoff">
+              <p id="letterClosing">Forever yours,</p>
+              <p class="letter-paper__signature" id="letterSignature">Kaavu ♡</p>
+            </div>
+            <p class="letter-paper__ps" id="letterPS"></p>
+            <button class="btn btn--paper" id="closeLetter" type="button">Fold it back</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         6. MAKE A WISH
+         ===================================================== -->
+    <section id="wish" class="section section--wish">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Chapter five · make a wish</p>
+          <h2 class="section__title">The world is yours today</h2>
+          <p class="section__accent">make a wish, my love</p>
+          <p class="section__intro" id="wishIntro">
+            Close your eyes. Think of something you’ve been quietly hoping for. Then press
+            the button — I’ll do the rest.
+          </p>
+        </header>
+
+        <div class="wish-stage">
+          <div class="wish-stage__glow" aria-hidden="true"></div>
+          <button class="wish-button" id="wishButton" type="button">
+            <span class="wish-button__star" aria-hidden="true">✦</span>
+            <span id="wishButtonLabel">Make a wish</span>
+          </button>
+
+          <div class="wish-message" id="wishMessage" hidden aria-live="polite">
+            <p id="wishMessageText"></p>
+            <p class="wish-message__signature" id="wishSignature">— Kaavu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__line">Made with my whole heart, for <span id="footerName">Babu</span>.</p>
+      <p class="footer__signature" id="footerSignature">Kaavu ♡</p>
+      <a class="footer__top" href="#welcome">Back to the beginning ↑</a>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal" aria-labelledby="modalTitle">
+    <div class="modal__panel" id="modalPanel">
+      <button class="modal__close" id="modalClose" type="button" aria-label="Close this window">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </dialog>
+
+  <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+  <canvas class="confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
+  <audio id="ourSongAudio" src="audio/our-song.mp3" preload="metadata"></audio>
+  <audio id="ambientAudio" preload="none"></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A blush heart under a gold star">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#3a2352"/>
+      <stop offset="100%" stop-color="#090a15"/>
+    </radialGradient>
+    <linearGradient id="heart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8d8e2"/>
+      <stop offset="100%" stop-color="#f0b8c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#090a15"/>
+  <rect x="2" y="2" width="60" height="60" rx="13" fill="url(#glow)" stroke="#d9b679" stroke-opacity="0.35"/>
+  <path d="M32 54C32 54 12 42 12 28.5C12 20 19.5 16 25.5 16C28.8 16 32 18.8 32 18.8C32 18.8 35.2 16 38.5 16C44.5 16 52 20 52 28.5C52 42 32 54 32 54Z" fill="url(#heart)"/>
+  <path d="M46 9L47.6 13.4L52 15L47.6 16.6L46 21L44.4 16.6L40 15L44.4 13.4L46 9Z" fill="#ecd3a3"/>
+</svg>
